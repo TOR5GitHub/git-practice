@@ -1,0 +1,113 @@
+Q1.compare the differences between two tags.
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ git tag v1.0
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ git push origin
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (12/12), 1.03 KiB | 529.00 KiB/s, done.
+Total 12 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/TOR5GitHub/git-practice.git
+   0656fdd..e4cf81b  main -> main
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ touch ampere.txt
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ code ampere.txt
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ git add .
+a
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ git commit -m "add ampere"
+[main ec4199a] add ampere
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ampere.txt
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ git tag v1.1
+
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ git diff v1.0 v1.1
+diff --git a/ampere.txt b/ampere.txt
+new file mode 100644
+index 0000000..11bf86b
+--- /dev/null
++++ b/ampere.txt
+@@ -0,0 +1 @@
++hello ampere i am working
+\ No newline at end of file
+
+
+
+
+
+Q2.compare the differences between local repo and remote repo.
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ git diff main origin/main
+
+diff --git a/ampere.txt b/ampere.txt
+deleted file mode 100644
+index 11bf86b..0000000
+--- a/ampere.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-hello ampere i am working
+\ No newline at end of file
+
+
+
+Q3.compare the working directory with a specific commit .
+
+
+
+rauha@ROY MINGW64 ~/OneDrive/Desktop/gitpracticerepo (main)
+$ git diff dca8f402930c79cb6e6231168fb01658c88e6f70 ec4199ac251ff53d68ce48d541b2c4085de728e6
+diff --git a/ampere.txt b/ampere.txt
+new file mode 100644
+index 0000000..11bf86b
+--- /dev/null
++++ b/ampere.txt
+@@ -0,0 +1 @@
++hello ampere i am working
+\ No newline at end of file
+diff --git a/file2.txt b/file2.txt
+index e69de29..40ac3ef 100644
+--- a/file2.txt
++++ b/file2.txt
+@@ -0,0 +1,2 @@
++me in class
++studing git
+\ No newline at end of file
+
+
+
+
+
+
+
+Q4.compare your local branch with the up stream version of the same branch.
+
+
+
+
+
+
+
+
